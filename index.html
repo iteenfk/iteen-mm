@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>おみくじゲーム</title>
+    <title>スライドショー</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <main>
-        <div class="test">
-            <h1>今日の運勢</h1>
-            <p id="result">?</p>
-
+        <img src="img/pic0.png" width="256" height="192" id="main-image">
+        <div class="container">
+            <button id="prev">←</button>
+            <button id="next">→</button>
         </div>
 
-        <button id="btn">おみくじを引く</button>
+        <div class="container">
+            <img src="img/pic0.png" width="80" height="60" class="thumbnail active">
+            <img src="img/pic1.png" width="80" height="60" class="thumbnail">
+            <img src="img/pic2.png" width="80" height="60" class="thumbnail">
+        </div>
     </main>
 
     <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
