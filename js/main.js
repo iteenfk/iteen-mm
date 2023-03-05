@@ -1,31 +1,10 @@
-"use strict";
+"use strict"
 
-const thumbnails = document.querySelectorAll(".thumbnail");
-const mainImage = document.getElementById("main-image");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-let activeIndex = 0;
+const btn = document.getElementById("btn");
+const result = document.getElementById("result");
 
-thumbnails[0].addEventListener("click", () => {
-    activeIndex = 0;
-    mainImage.src = thumbnails[0].src;
-    thumbnails[0].classList.add("active");
-    thumbnails[1].classList.remove("active");
-    thumbnails[2].classList.remove("active");
-});
-
-thumbnails[1].addEventListener("click", () => {
-    activeIndex = 1;
-    mainImage.src = thumbnails[1].src;
-    thumbnails[0].classList.remove("active");
-    thumbnails[1].classList.add("active");
-    thumbnails[2].classList.remove("active");
-});
-
-thumbnails[2].addEventListener("click", () => {
-    activeIndex = 2;
-    mainImage.src = thumbnails[2].src;
-    thumbnails[0].classList.remove("active");
-    thumbnails[1].classList.remove("active");
-    thumbnails[2].classList.add("active");
+btn.addEventListener("click", ()=>{
+    const results = ["大吉","中吉","小吉","凶","大凶"];
+    const n = Math.floor(Math.random() * results.length);
+    result.textContent = results[n];
 });
